@@ -38,20 +38,34 @@ const prices = [34, 5, 2];
 
 const shippingCost = 50;
 
-//const discount= 
+let shoppingCart = 0;
+let discount
 
-let utenteCheEffettuaLAcquisto = amy ;//cambia il valore qui per provare se il tuo algoritmo funziona!
+let utenteCheEffettuaLAcquisto = marco;//cambia il valore qui per provare se il tuo algoritmo funziona!
+let totCart=0;
+let invoice=0;
+
+for (let i = 0; i < prices.length; i++) {
+  totCart= prices[i];
+  shoppingCart= shoppingCart += totCart;
+}
+  if (utenteCheEffettuaLAcquisto.isAmbassador) {
+    discount = (shoppingCart *30) / 100;
+    invoice = (shoppingCart - discount) ;
+
+  } else {
+    invoice = totCart ;
+  }
+  console.log(shoppingCart)
+  
 
 
-//A partire da una lista di prezzi, un utente e un costo di spedizione l'algoritmo deve determinare il costo totale del carrello.
-let totPrices
+// if(){
 
-for (let i = 0; i<prices.length;i++ ) {
-  let x=prices[i]+prices[i+1];
-  totPrices= x+ prices[i++];
-}    
-reducelet shoppingCart=totPrices/*+shippingCost*/;
-    console.log('Il costo totale del carrello, compreso di spedizione, è di euro '+shoppingCart)  
+// }else{
+
+// }
+
 
 
 
