@@ -34,37 +34,51 @@ const amy = {
   isAmbassador: false,
 }
 
-const prices = [34, 5, 2];
+const prices = [200, 5, 2];
 
 const shippingCost = 50;
 
 let shoppingCart = 0;
-let discount
 
-let utenteCheEffettuaLAcquisto = marco;//cambia il valore qui per provare se il tuo algoritmo funziona!
-let totCart=0;
-let invoice=0;
+let utenteCheEffettuaLAcquisto = paul;//cambia il valore qui per provare se il tuo algoritmo funziona!
+let totPrice=0;
 
-for (let i = 0; i < prices.length; i++) {
-  totCart= prices[i];
-  shoppingCart= shoppingCart += totCart;
-}
-  if (utenteCheEffettuaLAcquisto.isAmbassador) {
-    discount = (shoppingCart *30) / 100;
-    invoice = (shoppingCart - discount) ;
-
-  } else {
-    invoice = totCart ;
-  }
-  console.log(shoppingCart)
-  
-
-
-// if(){
-
-// }else{
-
+// for (let i = 0; i < prices.length; i++) {
+//   totPrice= prices[i];
+//   shoppingCart= shoppingCart + totPrice;
 // }
+//   if (utenteCheEffettuaLAcquisto.isAmbassador) {
+//     shoppingCart = shoppingCart *0.7;
+//     console.log('Essendo un ambassador, ha diritto allo sconto del 30%.')
+
+
+//   } else {
+//     shoppingCart = shoppingCart ;
+//     console.log('Non essendo un ambassador, non ha diritto allo sconto del 30%.')
+//   }
+
+//   if(shoppingCart<100){
+//     shoppingCart=shoppingCart+ shippingCost;
+//     console.log('Essendo la spesa minore di 100, il costo totale da pagare, compresa la spedizione è ' + shoppingCart)
+
+//   } else{
+//     console.log('Si applica la promozione per la spesa maggiore di 100 e il costo totale da pagare è '+ shoppingCart)
+//   }
+
+  const utenti=[];
+  const  ambassador=[];
+  utenti.push(marco,amy,paul);
+
+  for(i=0;i<=utenti.lenght;i++){
+  if(utenti[i].isAmbassador===true)  {
+  console.log(utenti[i]['name']+' '+utenti[i]['lastName']+' è un ambassador')
+  }else{
+    console.log(utenti[i]['name']+' '+utenti[i]['lastName']+' non è un ambassador')
+
+  }
+
+  }
+
 
 
 
