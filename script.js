@@ -69,16 +69,15 @@ let totPrice=0;
   const  ambassador=[];
   utenti.push(marco,amy,paul);
 
-  for(i=0;i<=utenti.lenght;i++){
-  if(utenti[i].isAmbassador===true)  {
-  console.log(utenti[i]['name']+' '+utenti[i]['lastName']+' è un ambassador')
-  }else{
-    console.log(utenti[i]['name']+' '+utenti[i]['lastName']+' non è un ambassador')
+  // for(i=0;i<=utenti[i].lenght;i++){
+  // if(utenti[i].name==='Paul')  {
+  // console.log(utenti[i])
+  // }else{
+  //   console.log(utenti[i])
 
-  }
+  // }
 
-  }
-
+  // }
 
 
 
@@ -106,5 +105,6 @@ let totPrice=0;
 //         for(let k in utenti[i]){
 //         console.log(utenti[i]['name']+' '+utenti[i]['lastName']+' è un ambassador')
 //     }
+// }
 // }
 // console.log("ciao")
