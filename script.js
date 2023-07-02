@@ -31,7 +31,7 @@ const paul = {
 const amy = {
   name: "Amy",
   lastName: "Reed",
-  isAmbassador: false,
+  isAmbassador: true,
 }
 
 const prices = [200, 5, 2];
@@ -41,70 +41,106 @@ const shippingCost = 50;
 let shoppingCart = 0;
 
 let utenteCheEffettuaLAcquisto = paul;//cambia il valore qui per provare se il tuo algoritmo funziona!
-let totPrice=0;
+let totPrice = 0;
 
-// for (let i = 0; i < prices.length; i++) {
-//   totPrice= prices[i];
-//   shoppingCart= shoppingCart + totPrice;
-// }
-//   if (utenteCheEffettuaLAcquisto.isAmbassador) {
-//     shoppingCart = shoppingCart *0.7;
-//     console.log('Essendo un ambassador, ha diritto allo sconto del 30%.')
+for (let i = 0; i < prices.length; i++) {
+  totPrice= prices[i];
+  shoppingCart= shoppingCart + totPrice;
+}
+  if (utenteCheEffettuaLAcquisto.isAmbassador) {
+    shoppingCart = shoppingCart *0.7;
+    console.log('Essendo un ambassador, ha diritto allo sconto del 30%.')
 
 
-//   } else {
-//     shoppingCart = shoppingCart ;
-//     console.log('Non essendo un ambassador, non ha diritto allo sconto del 30%.')
+  } else {
+    shoppingCart = shoppingCart ;
+    console.log('Non essendo un ambassador, non ha diritto allo sconto del 30%.')
+  }
+
+  if(shoppingCart<100){
+    shoppingCart=shoppingCart+ shippingCost;
+    console.log('Essendo la spesa minore di 100, il costo totale da pagare, compresa la spedizione è ' + shoppingCart)
+
+  } else{
+    console.log('Si applica la promozione per la spesa maggiore di 100 e il costo totale da pagare è '+ shoppingCart)
+  }
+
+const utenti=[]
+utenti.push(marco, paul,amy)
+
+for(let i=0;i<utenti.length;i++){
+const persona = utenti[i]
+
+if(persona.isAmbassador){
+  console.log(persona.name + ' '+ persona.lastName+' è ambassador')
+
+}else{
+console.log(persona.name + ' '+persona.lastName+' non è ambassador')
+}
+
+
+
+
+}
+
+let isAmbassador=[]
+
+for(let i=0;i<utenti.length;i++){
+  const person= utenti[i]//trasformazione da array di oggetti a semplice oggetto?? per accedere meglio alle loro proprietà??
+  if(person.isAmbassador){
+    isAmbassador.push(person)
+
+}
+}console.log(isAmbassador ,  "QUESTI SONO TUTTI GLI AMBASSADOR")
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const tuttiUtenti = []
+// tuttiUtenti.push(marco, paul, amy)
+// console.log(tuttiUtenti)
+// for (let i = 0; i < tuttiUtenti.lenght; i++) {
+//   const utente = tuttiUtenti[i]
+//   let stringaBase = `${utente.name} ${utente.lastName}`
+//   if (!utente.isAmbassador) {
+//     stringaBase += " non"
 //   }
+//   stringaBase += " è un ambassador"
+//   console.log(stringBase)
 
-//   if(shoppingCart<100){
-//     shoppingCart=shoppingCart+ shippingCost;
-//     console.log('Essendo la spesa minore di 100, il costo totale da pagare, compresa la spedizione è ' + shoppingCart)
+// }
 
-//   } else{
-//     console.log('Si applica la promozione per la spesa maggiore di 100 e il costo totale da pagare è '+ shoppingCart)
+//   const tuttiUtenti = []
+// tuttiUtenti.push(marco, paul, amy)
+// console.log(tuttiUtenti)
+// for (let i = 0; i < tuttiUtenti.length; i++) {
+//   const utente = tuttiUtenti[i]
+//   let stringaBase = `${utente.name} ${utente.lastName} `
+//   if (!utente.isAmbassador) {
+//     stringaBase += "NON "
 //   }
-
-  const utenti=[];
-  const  ambassador=[];
-  utenti.push(marco,amy,paul);
-
-  // for(i=0;i<=utenti[i].lenght;i++){
-  // if(utenti[i].name==='Paul')  {
-  // console.log(utenti[i])
-  // }else{
-  //   console.log(utenti[i])
-
-  // }
-
-  // }
-
-
-
-
-// const utenti=[];
-// utenti.push(marco, paul, amy);
-
-// for(let i=0;i<=utenti.length;i++){
-//   if(marco.isAmbassador===true){
-//   console.log('ciao')
-// }else{
-//   console.log('gino')
-
-// }
+//   stringaBase += "e' un ambassador"
+//   console.log(stringaBase)
 // }
 
 
 
 
 
-
-// for(let i=0;i<=utenti.length;i++)
-// {
-//     if(utenti[i].name==='Amy') {
-//         for(let k in utenti[i]){
-//         console.log(utenti[i]['name']+' '+utenti[i]['lastName']+' è un ambassador')
-//     }
-// }
-// }
-// console.log("ciao")
