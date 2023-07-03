@@ -113,34 +113,5 @@ for(let i=0;i<utenti.length;i++){
 
 
 
-// const tuttiUtenti = []
-// tuttiUtenti.push(marco, paul, amy)
-// console.log(tuttiUtenti)
-// for (let i = 0; i < tuttiUtenti.lenght; i++) {
-//   const utente = tuttiUtenti[i]
-//   let stringaBase = `${utente.name} ${utente.lastName}`
-//   if (!utente.isAmbassador) {
-//     stringaBase += " non"
-//   }
-//   stringaBase += " è un ambassador"
-//   console.log(stringBase)
-
-// }
-
-//   const tuttiUtenti = []
-// tuttiUtenti.push(marco, paul, amy)
-// console.log(tuttiUtenti)
-// for (let i = 0; i < tuttiUtenti.length; i++) {
-//   const utente = tuttiUtenti[i]
-//   let stringaBase = `${utente.name} ${utente.lastName} `
-//   if (!utente.isAmbassador) {
-//     stringaBase += "NON "
-//   }
-//   stringaBase += "e' un ambassador"
-//   console.log(stringaBase)
-// }
-
-
-
 
 
